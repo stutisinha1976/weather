@@ -14,13 +14,17 @@ async function fetchData() {
         const data = await response.json();
         const cityElement = document.querySelector('.city');
         const temperatureElement = document.querySelector('.temp');
+        const feelsLikeElement = document.querySelector('.feels-like'); // New
         const humidityElement = document.querySelector('.humidity');
         const windElement = document.querySelector('.wind');
+        const windDegreeElement = document.querySelector('.wind-degree'); // New
 
         cityElement.textContent = city;
-        humidityElement.textContent = `${data.humidity}%`;
         temperatureElement.textContent = `${data.temp}°C`;
-        windElement.textContent = `${data.wind_speed} kmph`;
+        feelsLikeElement.textContent = ` ${data.feels_like}°C`; // New
+        humidityElement.textContent = ` ${data.humidity}%`;
+        windElement.textContent = ` ${data.wind_speed} kmph`;
+        windDegreeElement.textContent = ` ${data.wind_degrees}°`; // New
     } catch (error) {
         console.error(error);
     }

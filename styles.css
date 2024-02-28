@@ -25,10 +25,17 @@
 
    .card:hover{
     background-color: rgb(74, 181, 74);
+    opacity: 0.8;
     transition: 4s;
     box-shadow: 0 0 20px rgb(208, 234, 8);
    }
-
+   .row2{
+    display: flex;
+    justify-content: space-between;
+    
+    /* padding: 0 20px; */
+    margin-top: 80px;
+   }
 .search input{
     border:0;
     outline:0;
@@ -110,7 +117,7 @@
     margin-right: 10px;
     margin-top: -85px;
 }
-.humidity, .wind{
+.humidity, .wind, .feels-like,.wind-degree{
     font-size:22px;
     margin-top: -60px;
     font-family: monospace;
