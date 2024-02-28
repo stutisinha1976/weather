@@ -9,9 +9,77 @@
 <body style="background-image: url(bg.jpeg);">
    <div class="card">
     <div class="search">
+        <input type="text" placeholder="enter City" spellcheck="false" id="cityname">
+        <button onclick="fetchData()"><img src="search-icon.webp" class="search"></button>
+    </div>
+    <div class="weather">
+        <img src="rain.png" class="weather-icon">
+        <h1 class="temp">22°C</h1>
+        <h2 class="city">New York</h2>
+        <div class="details">
+            <div class="col">
+                <img src="humidity.svg">
+                <div>
+                    <p class="humidity">50%</p>
+                    <p>Humidity</p>
+                </div>
+            </div>
+            <div class="col" id="wind">
+                <img src="wind.png">
+                <div>
+                    <p class="wind">15 kmph</p>
+                    <p>Wind Speed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+    <script>
+        async function fetchData() {
+            const city = document.getElementById('cityname').value;
+            const url = `https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=${city}`;
+            const options = {
+                method: 'GET',
+                headers: {
+                    'X-RapidAPI-Key': '621ae92574mshdf0e867fb36a90dp187fccjsn8de9c6536fc8',
+                    'X-RapidAPI-Host': 'weather-by-api-ninjas.p.rapidapi.com'
+                }
+            };
+
+            try {
+                const response = await fetch(url, options);
+                const data = await response.json();
+                const cityElement = document.querySelector('.city');
+                const temperatureElement = document.querySelector('.temp');
+                const humidityElement = document.querySelector('.humidity');
+                const windElement = document.querySelector('.wind');
+
+                cityElement.textContent = city;
+                humidityElement.textContent = `${data.humidity}%`;
+                temperatureElement.textContent = `${data.temp}°C`;
+                windElement.textContent = `${data.wind_speed} kmph`;
+            } catch (error) {
+                console.error(error);
+            }
+        }
+    </script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background-image: url(bg.jpeg);">
+   <div class="card">
+    <div class="search">
        
-        <input type="text" placeholder="enter City" spellcheck="false">
-        <button><img src="search-icon.webp" class="search"> </button>
+        <input type="text" placeholder="enter City" spellcheck="false" id="cityname">
+        <button><img src="search-icon.webp" class="search" onclick="fetchData()"> </button>
     
     </div>
     <div class="weather">
@@ -33,6 +101,8 @@
     </div>
     </div>
    </div>
-    
+    <script src="script.js">
+        
+    </script>
 </body>
-</html>
+</html> -->
