@@ -24,10 +24,10 @@
 }
 
    .card:hover{
-    background-color: rgb(74, 181, 74);
+    transition:  2s ease;
     opacity: 0.8;
-    transition: 4s;
-    box-shadow: 0 0 20px rgb(208, 234, 8);
+    background-color: rgb(38, 143, 218);
+    box-shadow: 10px 10px 20px rgb(208, 234, 8);
    }
    .row2{
     display: flex;
@@ -122,4 +122,7 @@
     margin-top: -60px;
     font-family: monospace;
     color: rgb(5, 104, 31);
+}
+#ws{
+    margin-left: 50px;
 }
