@@ -74,6 +74,9 @@
     font-size:large;
     font-family: monospace;
     color:darkgreen;
+    position: relative;
+    right:10px;
+    bottom:10px;
 }
 
 .weather-icon {
@@ -134,8 +137,9 @@
 .col img {
     width: 40px;
     height: 40px;
-    margin-right: 10px;
     margin-top: -65px;
+    position: relative;
+    right:20%;
 }
 
 .humidity,
@@ -147,10 +151,13 @@
     margin-top: -40px;
     font-family: monospace;
     color: rgb(19, 25, 202);
+    position: relative;
+    right:10px;
+    bottom:10px;
 }
 #wind{
-    margin-left:10px;
+    margin-left:20px;
 }
 #ws {
-    margin-left: 40px;
+    margin-left: 45px;
 }
