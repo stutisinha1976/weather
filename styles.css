@@ -14,7 +14,7 @@
 
 .card {
     width: 90%;
-    max-width: 400px;
+    max-width: 300px;
     height: 500px;
     backdrop-filter: blur(10px);
     color: antiquewhite;
@@ -47,7 +47,7 @@
     padding: 10px 25px;
     height: 40px;
     border-radius: 30px;
-    width: 300px;
+    width: 200px;
     margin-right: 5px;
     font-size: 18px;
 }
@@ -71,22 +71,22 @@
     background-color: rgb(98, 196, 113);
 }
 .tag{
-    font-size:x-large;
+    font-size:large;
     font-family: monospace;
     color:darkgreen;
 }
 
 .weather-icon {
-    width: 120px;
+    width: 100px;
     position: relative;
     right: 20%;
-    margin-left: 30px;
+    margin-left: 20px;
     margin-top: 30px;
-    height: 120px;
+    height: 100px;
 }
 
 .weather h1 {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 600;
     position: relative;
     right: 20%;
@@ -97,12 +97,12 @@
 }
 
 .weather h2 {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 500;
     color: rgb(5, 104, 31);
     display: inline-block;
     position: relative;
-    left: 1%;
+    left: 5%;
     bottom: 35px;
     font-family: monospace;
     margin-left: 40px;
@@ -112,14 +112,14 @@
 .disp {
     display: flex;
     align-items: center;
-    padding-right: 90px;
+    /* padding-right: 90px; */
 
 }
 
 .row1 {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
     margin-top: 40px;
 }
 
@@ -132,25 +132,25 @@
 }
 
 .col img {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     margin-right: 10px;
-    margin-top: -85px;
+    margin-top: -65px;
 }
 
 .humidity,
 .wind,
 .feels-like,
 .wind-degree {
-    font-size:28px;
-    font-weight: 500;
-    margin-top: -60px;
+    font-size:20px;
+    font-weight: 400;
+    margin-top: -40px;
     font-family: monospace;
     color: rgb(19, 25, 202);
 }
 #wind{
-    margin-left:20px;
+    margin-left:10px;
 }
 #ws {
-    margin-left: 50px;
+    margin-left: 40px;
 }
